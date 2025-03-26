@@ -1,0 +1,45 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+    <div class="row">
+    <div class="col-8 offset-2" >
+    <h1>Create a new Listing:</h1>
+    <form method="post" action="/listing" novalidate class="needs-validation">
+        <div class="mb-3 mt-3">
+        <label for="title" class="form-label">Title</label>
+        <input name="new[title]" type="text" placeholder="Add a catchy title..  " class="form-control" required>
+        <div class="invalid-feedback">Please enter valid title</div>    
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea  name="new[description]" type="textarea" placeholder="description" class="form-control" required></textarea>
+            <div class="invalid-feedback">Please enter Description</div> 
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image-Link</label>
+            <input name="new[image][url]" type="text" placeholder="ImageURL eg: https://...." class="form-control" required>
+            <div class="invalid-feedback">Invalid image URL</div> 
+        </div>
+        <div class="row">
+            <div class="mb-3 col-12 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input name="new[price]" type="number" placeholder="eg:1200" class="form-control" required>
+                <div class="invalid-feedback">Please enter valid price</div> 
+            </div>
+        
+            <div class="mb-3 col-12 col-md-8">
+                <label for="country" class="form-label">Country</label>
+                <input name="new[country]" type="text" placeholder="India" class="form-control" required>
+                <div class="invalid-feedback">Not an Country</div> 
+            </div> 
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input name="new[location]" type="text" placeholder="eg:Hyderbad,Telangana.." class="form-control" required>
+            <div class="invalid-feedback">Invalid location</div> 
+        </div>  
+        <button class="btn btn-dark add-new mt-3">Add</button>
+    </form>
+</div>
+
+</div>
+</body>
